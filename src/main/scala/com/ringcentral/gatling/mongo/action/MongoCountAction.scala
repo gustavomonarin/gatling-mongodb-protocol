@@ -3,7 +3,7 @@ package com.ringcentral.gatling.mongo.action
 import com.ringcentral.gatling.mongo.command.MongoCountCommand
 import com.ringcentral.gatling.mongo.response.MongoCountResponse
 import io.gatling.commons.stats.KO
-import io.gatling.commons.util.TimeHelper.nowMillis
+import io.gatling.commons.util.ClockSingleton.nowMillis
 import io.gatling.commons.validation._
 import io.gatling.core.action.Action
 import io.gatling.core.config.GatlingConfiguration

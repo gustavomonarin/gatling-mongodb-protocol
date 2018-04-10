@@ -19,6 +19,8 @@ object MongoProtocolKey extends ProtocolKey {
 
   def defaultValue(configuration: GatlingConfiguration): MongoProtocol = throw new IllegalStateException("Can't provide a default value for MongoProtocol")
 
+  override def defaultProtocolValue(configuration: GatlingConfiguration): MongoProtocol = throw new IllegalStateException("Can't provide a default value for protocol value")
+
   def newComponents(system: ActorSystem, coreComponents: CoreComponents): MongoProtocol => MongoComponents =
     mongoProtocol => MongoComponents(mongoProtocol, MongoContext(mongoProtocol.uri, mongoProtocol.connectionTimeout))
 }
